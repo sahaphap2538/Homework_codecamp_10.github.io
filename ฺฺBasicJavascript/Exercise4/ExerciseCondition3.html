@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerciseการเขียนเงื่อนไข3</title>
+</head>
+<body>
+    <script>
+        // 3.ใช้ prompt ในการรับคะแนนมาคำนวณเกรด
+        //     - ถ้าคะแนน มากกว่าเท่ากับ 80    ได้ A
+        //     - ถ้าคะแนน อยู่ระหว่าง 70 - 79     ได้ B
+        //     - ถ้าคะแนน อยู่ระหว่าง 60 - 69     ได้ C
+        //     - ถ้าคะแนน อยู่ระหว่าง 50 - 59     ได้ D
+        //     - ถ้าคะแนน น้อยกว่า 50            ได้ F
+        let score = prompt('Enter score');
+        if (score >= 80) {
+            alert('Grade A')
+        } else if (score >= 70) {
+            alert('Grade B')
+        } else if (score >= 60) {
+            alert('Grade C')
+        } else if (score >= 50) {
+            alert('Grade D')
+        } else {
+            alert('Grade F')
+        }
+    </script>
+</body>
+</html>
