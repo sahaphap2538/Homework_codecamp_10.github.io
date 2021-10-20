@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 2.เขียนฟังก์ชันที่ checkSpam โดยถ้าข้อความดังกล่าวมีคำว่า “xxx” หรือ “viagra” ให้คืนค่าเป็น true ถ้าไม่มีให้คืนค่าเป็น false -->
+    <script>
+        function checkSpam(message) {
+            if (message.includes('xxx') || message.includes('viagra')) {
+                return true;
+            } else {
+                return false;
+            }
+        };
+
+        console.log(checkSpam('eipweipaxxxpawpo'));
+        console.log(checkSpam('ewpjpxxxdscmpviagradfvpkodfpfdfdfd'));
+        console.log(checkSpam('sdsopkdc[spckas[cpjoijopascsc'));
+
+    </script>
+</body>
+</html>

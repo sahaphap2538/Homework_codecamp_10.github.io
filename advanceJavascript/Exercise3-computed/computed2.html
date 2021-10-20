@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 2.ให้เขียนโปรแกรมที่รับค่า key และ value ของ Properties ของ Object หนึ่ง โดยให้ key เป็นชื่อของผลไม้ 
+        // และ value เป็นจำนวนของผลไม้ (number) โดยถ้า ผลไม้ชนิดไหนที่มีมากกว่า 1 ผล ให้เติม s ไปหลัง key นั้นด้วย"
+        let fruits = {};
+        while (true) {
+            let key = prompt('Enter fruit name');
+            if (key === 'stop') break;
+            let value = +prompt('Enter number of fruit');
+            if (value > 1) key += 's';
+            fruits[key] = value ;
+            
+        }
+        console.log(fruits);
+    </script>
+</body>
+</html>

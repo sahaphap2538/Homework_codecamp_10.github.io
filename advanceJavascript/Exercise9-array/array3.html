@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 3.เขียนฟังก์ชัน sumInput() ที่
+            - ใช้ propmt รับ value มาเก็บใน array
+            - หยุดถามเมื่อเจอค่าที่ไม่ใช่ ตัวเลข
+            - คำนวณผลรวมของตัวเลขทั้งหมดใน Array     -->
+    <script>
+        function sumInput(){
+            let array =[];
+            while (true) {
+                let value = +prompt('Enter value');
+                if (isNaN(value))  break;
+                array.push(value);
+            }
+            return array.reduce((i,j) => i + j);
+        }
+
+        console.log(sumInput());
+        
+    </script>
+</body>
+</html>

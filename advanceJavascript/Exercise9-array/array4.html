@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 4.Maximal contiguous subarray (**Optional**)
+            - ให้เขียนฟังก์ชัน getMaxSubSum(arr) ที่ return ผลรวมของ subarray ที่มากที่สุดที่ติดกัน -->
+    <script>
+        function getMaxSubSum(arr) {
+            let n = arr.length;
+            let maxSumSubArray = 0;
+            for (let start = 0; start < n; start++ ){
+                for (let end = 0; end <= n; end++ ){
+                    let sumSubArray = arr.slice(start, end).reduce(((i,j) => i+j),0);
+                    if (sumSubArray > maxSumSubArray){
+                        maxSumSubArray = sumSubArray;
+                    } 
+                }
+            }
+            return maxSumSubArray;
+        }
+
+        console.log(getMaxSubSum([-1, 2, 3, -9]) == 5);
+        console.log(getMaxSubSum([2, -1, 2, 3, -9]) == 6);
+        console.log(getMaxSubSum([-1, 2, 3, -9, 11]) == 11);
+        console.log(getMaxSubSum([-2, -1, 1, 2]) == 3);
+        console.log(getMaxSubSum([100, -9, 2, -3, 5]) == 100);
+        console.log(getMaxSubSum([1, 2, 3]) == 6 );
+        
+    </script>
+</body>
+</html>

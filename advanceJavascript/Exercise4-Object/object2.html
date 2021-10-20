@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 2.ให้เขียนฟังก์ชันชื่อ isEmpty(obj) โดยจะมี parameters เป็น obj และ ฟังก์ชันนี้จะเช็คว่า obj นี้มี properties ไหม 
+        ถ้ามีให้คืนค่า false ถ้าไม่มีให้คืนค่า true -->
+    <script>
+        function isEmpty(obj) {
+            if (Object.keys(obj).length === 0){
+                return true;
+            } else {
+                return false;
+            } 
+        }
+        console.log(isEmpty({}));
+        console.log(isEmpty({name:'haha', age:20}));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1.ให้ arr เป็น Array สร้าง function ชื่อ unique(arr) ให้คืนค่าเป็น unique items ของ arr -->
+    <script>
+        function unique(arr) {
+            let valuesSet = new Set(values);
+            let allItem = '' ;
+            for (i of valuesSet){
+                allItem += i + '  ';
+            }
+            return allItem;
+        }
+
+        let values = ["Hare", "Krishna", "Hare", "Krishna", "Krishna", "Krishna", "Hare", "Hare", ":-O" ];
+
+        alert (unique(values)); // Hare, Krishna, :-O
+
+    </script>
+</body>
+</html>

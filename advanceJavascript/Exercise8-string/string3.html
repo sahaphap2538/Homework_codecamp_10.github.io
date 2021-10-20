@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 3.เขียนฟังก์ชันที่ truncate(str, maxlength) โดยฟังก์ชันดังกล่าวจะเช็คว่า string 
+    ที่ถูกส่งเข้ามามีความยาวเกิน maxlength ไหม ถ้าเกินให้แทน ข้อความต่อจากนั้นด้วย “...” -->
+    <script>
+        function truncate(str, maxlength) {
+            if (str.length > maxlength) {
+                str = str.slice(0,maxlength-1) + '...'
+            }
+            return str;
+        }
+
+        console.log(truncate("What I'd like to tell on this topic is:", 20));
+        console.log(truncate("Hi everyone!", 20));
+    </script>
+</body>
+</html>

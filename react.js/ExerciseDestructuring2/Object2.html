@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let salaries = {
+            'John' : 100,
+            'Pete' : 300,
+            'Mary' : 250,
+            'Kop' : 300,
+        };
+
+        function topSalary(salaries) {
+            if (salaries == null) {
+                return null;
+            } else {
+                let max = Math.max(...Object.values(salaries));
+                let nameMax ='';
+                for (i in salaries){
+                    if (salaries[i] == max){
+                        nameMax += i +'\t';
+                    }
+                }
+                return nameMax;
+            }
+        }
+
+        console.log(topSalary(salaries)); 
+        console.log(topSalary());
+
+    </script>
+</body>
+</html>

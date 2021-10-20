@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array1 = [
+                { name: "apple", birth: "2000-01-01" },
+                { name: "banana", birth: "1990-10-01" },
+                { name: "watermelon", birth: "1985-12-01" },
+            ]
+        let array2 = array1.map( i => {
+            i.age = 2019 - (+i.birth.slice(0,4))
+            return i
+        } );
+
+        console.log(array2);
+
+    </script>
+</body>
+</html>
