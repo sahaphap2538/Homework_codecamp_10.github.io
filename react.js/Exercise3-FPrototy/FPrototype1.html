@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- 1.จากโค๊ดต่อไปนี้มีการสร้าง new Rabbit() ขึ้นมา
+            - ถ้ามีการ alert ในบรรทัดดังกล่าวจะได้อะไรออกมา 
+            - ถ้ามีการเปลี่ยนบรรทัดสีเหลืองจะเป็นอย่างไร -->
+    <script>
+        function Rabbit() {}
+        Rabbit.prototype = {
+            eats: true
+        };
+
+        let rabbit = new Rabbit();
+
+        // Rabbit.prototype = {}; //เพิ่มจากโจทย์
+        // alert( rabbit.eats ); // 1. ตอบ true เหมือนเดิมเพราะไม่ได้ new อีก
+
+        // Rabbit.prototype.eats = false;
+        // alert( rabbit.eats ); // 2. ตอบ false เพราะ โดนเป็นเป็นfalse
+
+        // delete rabbit.eats;
+        // alert( rabbit.eats ); // 3. ตอบ true เพราะ ลบไม่ได้เพราะใน rabbit ไม่มี คีย์eats 
+
+        delete Rabbit.prototype.eats;
+        alert( rabbit.eats ); // 4. ตอบ undefided เพราะไปลบที่ตัว Prototype
+    </script>
+</body>
+</html>
