@@ -1,0 +1,1 @@
+SELECT distinct sname,age FROM boat_test.sailors;
